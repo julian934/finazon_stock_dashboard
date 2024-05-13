@@ -70,8 +70,8 @@ const SearchBar = (props: any) => {
      md:ml-12 md:h-12' >
         <input className=' rounded-sm border-2 md:text-2xl ' placeholder='Search for Stock' onChange={handleChange} ref={inputData} />
         {searchTerm!=null? <ScrollArea className=' max-sm:h-[200px] md:h-[100px] max-sm:w-[350px] md:w-[450px] md:z-20 rounded-md border p-4' >
-          {searchTerm && searchTerm?.map((item:any)=>(<div className='' >
-            <button className='' onClick={()=>fetchDataForTicker(item.ticker)}  > <h1 className='' >{item.ticker}</h1> </button>
+          {searchTerm && searchTerm?.map((item:any)=>(<div key={item.id} className='' >
+            <button className='' key={item.id} onClick={()=>fetchDataForTicker(item.ticker)}  > <h1 className='' >{item.ticker}</h1> </button>
   </div>))} 
   </ScrollArea> :<div  >
     </div>}
