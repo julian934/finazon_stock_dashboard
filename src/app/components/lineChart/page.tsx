@@ -1,3 +1,4 @@
+'use client'
 import React,{useState,useContext,useEffect,useRef} from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { StoreStateContext } from '@/app/utils/context/page';
