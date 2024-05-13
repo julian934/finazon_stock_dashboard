@@ -1,7 +1,7 @@
 import { NextApiRequest,NextApiResponse } from "next";
 
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function getFinances(req: NextApiRequest, res: NextApiResponse) {
     try {
         const apiKey = process.env.NEXT_PUBLIC_YELP_API_KEY;
         const url = req.query.url as string; // Assuming you're passing the URL as a query parameter
