@@ -8,7 +8,7 @@ const requestOptions:any = {
     redirect: "follow"
 };
 
-export default async function handler(request: NextApiRequest, response: NextApiResponse) {
+export default async function getTimeSeries(request: NextApiRequest, response: NextApiResponse) {
     try {
         const res = await fetch('https://api.finazon.io/latest/time_series', requestOptions);
         const data = await res.json();
