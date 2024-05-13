@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useEffect } from 'react'; // Import useEffect directly
 import Chart, { ChartTypeRegistry } from 'chart.js/auto';
 import 'chartjs-adapter-date-fns';
