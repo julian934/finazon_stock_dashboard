@@ -9,6 +9,7 @@ type ChartData = {
   values:number[];
 }
 
+
   const LineChart = ({ data }:{data:ChartData}) => {
     console.log(data)
     const chartRef = useRef<HTMLCanvasElement>(null);

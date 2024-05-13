@@ -17,7 +17,8 @@ const myHeaders = new Headers();
 myHeaders.append("Authorization", "apikey 82d7e7011dd94d09bc862d75e429d9d6nw");
 import { useFetchData } from '../api/getMarketList/route'
 //remove usequery until further notice, stick with context and get it done.
-import LineChart from '../components/lineChart/page'
+//import LineChart from '../components/lineChart/page'
+import LineChart from '../components/revisedLineChart/page'
 import SliderComponent from '../components/dataSlider/page'
 import { slider } from '@material-tailwind/react'
 import { useMutation } from '@tanstack/react-query'
