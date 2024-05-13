@@ -1,16 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { useQuery, UseQueryOptions } from '@tanstack/react-query';
 
-export async function getData(request: NextApiRequest, res: NextApiResponse) {
-    try {
-        const data = await fetchDataFromExternalAPI();
-        res.status(200).json(data);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-}
-
 export async function fetchDataFromExternalAPI() {
     const apiKey = process.env.NEXT_PUBLIC_YELP_API_KEY;
     const url = 'https://api.finazon.io/latest/tickers/stocks?dataset=us_stocks_essential';
@@ -33,3 +23,14 @@ export function useFetchData() {
         staleTime:3000
     });
 }
+
+export default async function getData(request: NextApiRequest, res: NextApiResponse) {
+    try {
+        const data = await fetchDataFromExternalAPI();
+        res.status(200).json(data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}
+

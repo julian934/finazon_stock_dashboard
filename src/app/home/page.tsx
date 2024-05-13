@@ -15,7 +15,7 @@ import Footer from '../components/footer/page'
 import Slider from '../components/dataSlider/page'
 const myHeaders = new Headers();
 myHeaders.append("Authorization", "apikey 82d7e7011dd94d09bc862d75e429d9d6nw");
-import { useFetchData } from '../api/getMarketList/route'
+import { useFetchData } from '../api/getMarketList/getData'
 //remove usequery until further notice, stick with context and get it done.
 //import LineChart from '../components/lineChart/page'
 import LineChart from '../components/revisedLineChart/page'

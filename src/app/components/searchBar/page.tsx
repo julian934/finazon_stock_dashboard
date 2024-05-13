@@ -1,8 +1,8 @@
 "use client"
 import React,{useState,useEffect,useContext,useRef} from 'react'
-import { useFetchData } from '@/app/api/getMarketList/route'
+import { useFetchData } from '@/app/api/getMarketList/getData'
 import { useQuery } from '@tanstack/react-query'
-import { fetchDataFromExternalAPI } from '@/app/api/getMarketList/route'
+import { fetchDataFromExternalAPI } from '@/app/api/getMarketList/getData'
 import { getIndividualTicker } from '@/app/utils/getStockData/page'
 import { getStockData } from '@/app/utils/getStockData/page'
 import { StoreStateContext } from '@/app/utils/context/page'
