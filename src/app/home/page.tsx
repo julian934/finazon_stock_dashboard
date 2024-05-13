@@ -9,7 +9,7 @@ import Link from 'next/link';
 import StockData from '../components/scrollBar/page'
 import axios from "axios"
 import Dashboard from '../components/dashboardDisplay/page'
-import StockChart from '../components/lineChart/page'
+//import StockChart from '../components/lineChart/page'
 import SearchBar from '../components/searchBar/page'
 import Footer from '../components/footer/page'
 import Slider from '../components/dataSlider/page'

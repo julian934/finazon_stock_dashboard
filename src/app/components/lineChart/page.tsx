@@ -1,4 +1,5 @@
 "use client"
+/*
 import React,{useState,useContext,useEffect,useRef} from 'react';
 
 import Chart,{ChartTypeRegistry} from 'chart.js/auto';
@@ -72,3 +73,4 @@ type ChartData = {
     };
     
     export default LineChart;
+    */
