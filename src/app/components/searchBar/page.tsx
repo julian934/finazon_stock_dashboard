@@ -1,3 +1,4 @@
+"use client"
 import React,{useState,useEffect,useContext,useRef} from 'react'
 import { useFetchData } from '@/app/api/getMarketList/route'
 import { useQuery } from '@tanstack/react-query'
