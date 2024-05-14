@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query'
 import { useState,useEffect } from 'react'
 import { useContext } from 'react'
 import { StoreStateContext } from '../utils/context/storeContext'
-import { getStockData ,getTimeSeries,getDataSnapshot,getIndividualTicker} from '../utils/getStockData/page'
+import { getStockData ,getTimeSeries,getDataSnapshot,getIndividualTicker} from '../utils/getStockData/stockData'
 import Link from 'next/link';
 import StockData from '../components/scrollBar/page'
 import axios from "axios"
@@ -23,7 +23,7 @@ import LineChart from '../components/revisedLineChart/revisedLineChart'
 import { SliderComponent } from '../components/dataSlider/dataSlider'
 import { slider } from '@material-tailwind/react'
 import { useMutation } from '@tanstack/react-query'
-import { getSliderData } from '../utils/getStockData/page'
+import { getSliderData } from '../utils/getStockData/stockData'
 import Modal from '../components/modals/slidermodal/modal'
 const requestOptions:any = {
   method: "GET",
