@@ -4,7 +4,7 @@ import { ReactQueryStreamedHydration } from '@tanstack/react-query-next-experime
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { createContext,useContext } from 'react';
-import { StoreStateContextProvider } from './utils/context/page'
+import { StoreStateContextProvider } from './utils/context/storeContext'
 
 //type Props = {}
 

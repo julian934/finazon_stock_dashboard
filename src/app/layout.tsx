@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { StoreStateContextProvider } from './utils/context/page'
+import { StoreStateContextProvider } from './utils/context/storeContext'
 import { Provider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 import { useQuery } from "@tanstack/react-query";

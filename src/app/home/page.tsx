@@ -3,7 +3,7 @@ import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useState,useEffect } from 'react'
 import { useContext } from 'react'
-import { StoreStateContext } from '../utils/context/page'
+import { StoreStateContext } from '../utils/context/storeContext'
 import { getStockData ,getTimeSeries,getDataSnapshot,getIndividualTicker} from '../utils/getStockData/page'
 import Link from 'next/link';
 import StockData from '../components/scrollBar/page'

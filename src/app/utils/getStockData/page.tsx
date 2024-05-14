@@ -1,7 +1,7 @@
 'use server'
 import axios from "axios"
 import {useState,useContext, useEffect} from 'react';
-import { StoreStateContext } from "../context/page";
+import { StoreStateContext } from "../context/storeContext";
 import Dashboard from "@/app/components/dashboardDisplay/page";
 //import { fetchDataFromExternalAPI } from "@/app/api/getFinances/route";
 const myHeaders = new Headers();
