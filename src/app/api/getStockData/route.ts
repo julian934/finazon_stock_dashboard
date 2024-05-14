@@ -13,7 +13,7 @@ const requestOptions:any = {
 };
 
 //get Stock Codes, Last Price, Previous Day Price, Price Change, Percent Change, Max Price, Low Price
-export async function getData(req:NextApiRequest,res:NextApiResponse):Promise<void>{
+export default async function getData(req:NextApiRequest,res:NextApiResponse):Promise<void>{
   try {
     const response = await fetch("https://api.finazon.io/latest/tickers/us_stocks", requestOptions);
     if (!response.ok) {
