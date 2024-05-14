@@ -24,6 +24,6 @@ export default async function getData(req:NextApiRequest,res:NextApiResponse):Pr
     return res.status(200).json(data);
 } catch (error) {
     console.error(error);
-    return res.status(500).json({errir:'Failed to fetch data'})
+    return res.status(500).json({error:'Failed to fetch data'})
 }
 }
