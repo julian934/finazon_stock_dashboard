@@ -6,7 +6,8 @@ import { fetchDataFromExternalAPI } from '@/app/api/getMarketList/getData'
 import { getIndividualTicker } from '@/app/utils/getStockData/page'
 import { getStockData } from '@/app/utils/getStockData/page'
 import { StoreStateContext } from '@/app/utils/context/page'
-import  {ScrollAreaPage}  from '../UI/scrollBar/page'
+//import  {ScrollAreaPage}  from '../UI/scrollBar/page'
+import { ScrollAreaPage } from '../UI/scrollBar/page'
 type Props = {}
 
 const SearchBar:React.FC<Props> = (props: any) => {
