@@ -1,9 +1,7 @@
-import axios from "axios";
-import { NextResponse } from "next/server";
+
 const myHeaders = new Headers();
 myHeaders.append("Authorization", "apikey 82d7e7011dd94d09bc862d75e429d9d6nw");
-//import Error from "next/error";
-import NextError from "next/error"
+
 import { NextApiRequest,NextApiResponse } from "next";
 
 const requestOptions:any = {
