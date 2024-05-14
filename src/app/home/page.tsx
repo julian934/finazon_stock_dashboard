@@ -18,7 +18,7 @@ myHeaders.append("Authorization", "apikey 82d7e7011dd94d09bc862d75e429d9d6nw");
 import { useFetchData } from '../api/getMarketList/getData'
 //remove usequery until further notice, stick with context and get it done.
 //import LineChart from '../components/lineChart/page'
-import LineChart from '../components/revisedLineChart/page'
+import LineChart from '../components/revisedLineChart/revisedLineChart'
 //import SliderComponent from '../components/dataSlider/page'
 import { SliderComponent } from '../components/dataSlider/dataSlider'
 import { slider } from '@material-tailwind/react'
