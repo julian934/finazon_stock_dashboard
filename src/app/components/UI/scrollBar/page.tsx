@@ -26,6 +26,7 @@ const ScrollAreaPage: React.FC<ScrollAreaProps> = ({children,className}) => (
 >(({ className, orientation = "vertical", ...props }, ref) => (
   <ScrollAreaPrimitive.ScrollAreaScrollbar
     ref={ref}
+    {...props}
     orientation={orientation}
     className={cn(
       "flex touch-none select-none transition-colors",
