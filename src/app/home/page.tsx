@@ -3,8 +3,10 @@ import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useState,useEffect } from 'react'
 import { useContext } from 'react'
+//import { StoreStateContext } from '../utils/context/storeContext'
 import { StoreStateContext } from '../utils/context/storeContext'
-import { getStockData ,getTimeSeries,getDataSnapshot,getIndividualTicker} from '../utils/getStockData/stockData'
+//import { getStockData ,getTimeSeries,getDataSnapshot,getIndividualTicker} from '../utils/getStockData/stockData'
+import { getIndividualTicker } from '../utils/getStockData/getStockData'
 import Link from 'next/link';
 import StockData from '../components/scrollBar/page'
 import axios from "axios"
@@ -18,12 +20,16 @@ myHeaders.append("Authorization", "apikey 82d7e7011dd94d09bc862d75e429d9d6nw");
 import { useFetchData } from '../api/getMarketList/getData'
 //remove usequery until further notice, stick with context and get it done.
 //import LineChart from '../components/lineChart/page'
-import LineChart from '../components/revisedLineChart/revisedLineChart'
+//import LineChart from '../components/revisedLineChart/revisedLineChart'
+//import LineChart from '../components/revisedLineChart/page'
+import LineChart from '../components/revisedLineChart/page'
 //import SliderComponent from '../components/dataSlider/page'
-import { SliderComponent } from '../components/dataSlider/dataSlider'
+//import { SliderComponent } from '../components/dataSlider/dataSlider'
+import { SliderComponent } from '../components/dataSlider/page'
 import { slider } from '@material-tailwind/react'
 import { useMutation } from '@tanstack/react-query'
-import { getSliderData } from '../utils/getStockData/stockData'
+//import { getSliderData } from '../utils/getStockData/stockData'
+import { getSliderData } from '../utils/getStockData/getStockData'
 import Modal from '../components/modals/slidermodal/modal'
 const requestOptions:any = {
   method: "GET",

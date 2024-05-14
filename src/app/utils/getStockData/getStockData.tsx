@@ -1,9 +1,10 @@
 'use server'
 import axios from "axios"
 import {useState,useContext, useEffect} from 'react';
-import { StoreStateContext } from "../context/storeContext";
+//import { StoreStateContext } from "../context/storeContext";
 import Dashboard from "@/app/components/dashboardDisplay/page";
 //import { fetchDataFromExternalAPI } from "@/app/api/getFinances/route";
+import { fetchDataFromExternalAPI } from "@/app/api/getFinances/getFinances";
 const myHeaders = new Headers();
 myHeaders.append("Authorization", "apikey 82d7e7011dd94d09bc862d75e429d9d6nw");
 
@@ -77,17 +78,22 @@ export async function getIndividualTicker(ticker:any){
     
     i++
    }*/
-   //let fetchedData=`https://api.finazon.io/latest/ticker/snapshot?dataset=us_stocks_essential&ticker=${ticker}`
+   let fetchedData=`https://api.finazon.io/latest/ticker/snapshot?dataset=us_stocks_essential&ticker=${ticker}`
     
-   //let testedData=await fetchDataFromExternalAPI(fetchedData)
-    
+   let testedData=await fetchDataFromExternalAPI(fetchedData)
+    try{
+      console.log(testedData)
+          return testedData
+    }catch(error){
+      console.log(error)
+    }
    
    //Summon data via get finances and set to global state via context.
    //loops through data and connects to the api/getFinances.
    //Consensus: very promising.
    //Addendum: Algorithm successful but API only gives two requests per minute for free. Need to compensate. 
    //return testedData
-   try {
+   /*try {
     const url = `/api/getFinances?url=https://api.finazon.io/latest/ticker/snapshot?dataset=us_stocks_essential&ticker=${ticker}`;
     const response = await axios.get(url);
     return response.data;
@@ -95,6 +101,7 @@ export async function getIndividualTicker(ticker:any){
     console.error(`Failed to fetch data for ${ticker}:`, error);
     return null;
   }
+  */
 } 
 
 export async function getSliderData(ticker:any,index:any){

@@ -1,7 +1,7 @@
 import { NextApiRequest,NextApiResponse } from "next";
 
 
-export default async function getFinances(req: NextApiRequest, res: NextApiResponse) {
+/*export default async function getFinances(req: NextApiRequest, res: NextApiResponse) {
     try {
         const apiKey = process.env.NEXT_PUBLIC_YELP_API_KEY;
         const url = req.query.url as string; // Assuming you're passing the URL as a query parameter
@@ -24,8 +24,8 @@ export default async function getFinances(req: NextApiRequest, res: NextApiRespo
         res.status(500).json({ error: 'Internal server error' });
     }
 }
-
-/*export async function fetchDataFromExternalAPI(url:string) {
+*/
+export async function fetchDataFromExternalAPI(url:string) {
     console.log(url)
     const searchParams=url
     //const query=searchParams.get('ticker')
@@ -44,4 +44,3 @@ export default async function getFinances(req: NextApiRequest, res: NextApiRespo
     }
     return await response.json();
 }
-*/

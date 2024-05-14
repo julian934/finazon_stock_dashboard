@@ -3,12 +3,15 @@ import React,{useState,useEffect,useContext,useRef} from 'react'
 import { useFetchData } from '@/app/api/getMarketList/getData'
 import { useQuery } from '@tanstack/react-query'
 import { fetchDataFromExternalAPI } from '@/app/api/getMarketList/getData'
-import { getIndividualTicker } from '@/app/utils/getStockData/stockData'
-import { getStockData } from '@/app/utils/getStockData/stockData'
+//import { getIndividualTicker } from '@/app/utils/getStockData/stockData'
+import { getIndividualTicker } from '@/app/utils/getStockData/getStockData'
+//import { getStockData } from '@/app/utils/getStockData/stockData'
+import { getStockData } from '@/app/utils/getStockData/getStockData'
 import { StoreStateContext } from '@/app/utils/context/storeContext'
 //import  {ScrollAreaPage}  from '../UI/scrollBar/page'
 //import { ScrollAreaPage } from '../UI/scrollBar/page'
-import ScrollAreaPage from '../UI/scrollBar/scrollBar'
+//import ScrollAreaPage from '../UI/scrollBar/scrollBar'
+import ScrollAreaPage from '../UI/scrollBar/page'
 type Props = {}
 
 const SearchBar:React.FC<Props> = (props: any) => {

@@ -2,10 +2,13 @@
 import React,{useState,useEffect,useContext} from 'react'
 import { Grid } from 'gridjs-react';
 import { useQuery } from '@tanstack/react-query';
-import { getTimeSeries,getDataSnapshot } from '@/app/utils/getStockData/stockData';
+//import { getTimeSeries,getDataSnapshot } from '@/app/utils/getStockData/stockData';
+import getTimeSeries from '@/app/api/getTimeSeries/getTimeSeries';
+import { getDataSnapshot } from '@/app/utils/getStockData/getStockData';
 import { StoreStateContext } from '@/app/utils/context/storeContext';
 import { useFetchData } from '@/app/api/getMarketList/getData';
-import { getIndividualTicker } from '@/app/utils/getStockData/stockData';
+//import { getIndividualTicker } from '@/app/utils/getStockData/stockData';
+import { getIndividualTicker } from '@/app/utils/getStockData/getStockData';
 type Props = {}
 
 /*interface DashboardProps{
