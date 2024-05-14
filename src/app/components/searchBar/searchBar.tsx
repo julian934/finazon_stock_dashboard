@@ -11,7 +11,8 @@ import { StoreStateContext } from '@/app/utils/context/storeContext'
 //import  {ScrollAreaPage}  from '../UI/scrollBar/page'
 //import { ScrollAreaPage } from '../UI/scrollBar/page'
 //import ScrollAreaPage from '../UI/scrollBar/scrollBar'
-import ScrollAreaPage from '../UI/scrollBar/page'
+//import ScrollAreaPage from '../UI/scrollBar/scrollBar'
+import ScrollAreaPage from '../UI/revisedScrollBar/scrollBar'
 type Props = {}
 
 const SearchBar:React.FC<Props> = (props: any) => {
