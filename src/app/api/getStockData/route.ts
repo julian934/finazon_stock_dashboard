@@ -1,15 +1,17 @@
-import { NextApiRequest,NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from "next";
+import { IncomingMessage, ServerResponse } from "http";
+
 const myHeaders = new Headers();
 myHeaders.append("Authorization", "apikey 82d7e7011dd94d09bc862d75e429d9d6nw");
 
-const requestOptions:any = {
+const requestOptions: any = {
   method: "GET",
   headers: myHeaders,
   redirect: "follow"
 };
 
-//get Stock Codes, Last Price, Previous Day Price, Price Change, Percent Change, Max Price, Low Price
- async function getData(req:NextApiRequest | Request,res:NextApiResponse):Promise<void>{
+// Define the type for the 'getData' function's arguments
+async function getData(req: NextApiRequest | IncomingMessage, res: NextApiResponse | ServerResponse): Promise<void> {
   try {
     const response = await fetch("https://api.finazon.io/latest/tickers/us_stocks", requestOptions);
     if (!response.ok) {
@@ -17,11 +19,13 @@ const requestOptions:any = {
     }
     const data = await response.json();
     console.log(data);
-    return res.status(200).json(data);
-} catch (error) {
+    // Ensure 'res' is treated as NextApiResponse by using a type assertion
+    (res as NextApiResponse).status(200).json(data);
+  } catch (error) {
     console.error(error);
-    return res.status(500).json({error:'Failed to fetch data'})
-}
+    // Ensure 'res' is treated as NextApiResponse by using a type assertion
+    (res as NextApiResponse).status(500).json({ error: 'Failed to fetch data' });
+  }
 }
 
-export {getData as GET}
+export { getData as GET };
