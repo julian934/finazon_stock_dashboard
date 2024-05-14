@@ -1,8 +1,6 @@
-
+import { NextApiRequest,NextApiResponse } from "next";
 const myHeaders = new Headers();
 myHeaders.append("Authorization", "apikey 82d7e7011dd94d09bc862d75e429d9d6nw");
-
-import { NextApiRequest,NextApiResponse } from "next";
 
 const requestOptions:any = {
   method: "GET",
@@ -11,7 +9,7 @@ const requestOptions:any = {
 };
 
 //get Stock Codes, Last Price, Previous Day Price, Price Change, Percent Change, Max Price, Low Price
- async function getData(req:NextApiRequest,res:NextApiResponse):Promise<void>{
+ export default async function getData(req:NextApiRequest,res:NextApiResponse):Promise<void>{
   try {
     const response = await fetch("https://api.finazon.io/latest/tickers/us_stocks", requestOptions);
     if (!response.ok) {
@@ -26,6 +24,3 @@ const requestOptions:any = {
 }
 }
 
-export default {
-  handler:getData
-}
