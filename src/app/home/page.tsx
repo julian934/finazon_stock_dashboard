@@ -12,14 +12,15 @@ import Dashboard from '../components/dashboardDisplay/page'
 //import StockChart from '../components/lineChart/page'
 import SearchBar from '../components/searchBar/searchBar'
 import Footer from '../components/footer/page'
-import Slider from '../components/dataSlider/page'
+//import Slider from '../components/dataSlider/page'
 const myHeaders = new Headers();
 myHeaders.append("Authorization", "apikey 82d7e7011dd94d09bc862d75e429d9d6nw");
 import { useFetchData } from '../api/getMarketList/getData'
 //remove usequery until further notice, stick with context and get it done.
 //import LineChart from '../components/lineChart/page'
 import LineChart from '../components/revisedLineChart/page'
-import SliderComponent from '../components/dataSlider/page'
+//import SliderComponent from '../components/dataSlider/page'
+import { SliderComponent } from '../components/dataSlider/page'
 import { slider } from '@material-tailwind/react'
 import { useMutation } from '@tanstack/react-query'
 import { getSliderData } from '../utils/getStockData/page'

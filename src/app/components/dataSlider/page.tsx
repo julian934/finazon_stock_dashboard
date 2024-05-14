@@ -1,8 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import { Slider } from '@material-tailwind/react';
 
-type Props = {};
-
 type ValidColor = 'light-blue' | 'blue' | 'indigo' | 'purple' | 'pink' | 'red' | 'orange' | 'yellow' | 'green' | 'teal' | 'cyan';
 
 interface SliderProps {
@@ -22,7 +20,7 @@ interface SliderProps {
   defaultChecked?: boolean;
 }
 
-const SliderComponent: React.FC<SliderProps> = ({ min, max, value, onChange, color }) => {
+export const SliderComponent: React.FC<SliderProps> = ({ min, max, value, onChange, color }) => {
   const sliderChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = parseFloat(event.target.value);
     onChange(newValue);
@@ -43,4 +41,3 @@ const SliderComponent: React.FC<SliderProps> = ({ min, max, value, onChange, col
   );
 };
 
-export default SliderComponent;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query'
-import SliderComponent from '../../dataSlider/page'
+//import SliderComponent from '../../dataSlider/page'
 
 
 type Props = {}
