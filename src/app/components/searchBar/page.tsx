@@ -6,10 +6,10 @@ import { fetchDataFromExternalAPI } from '@/app/api/getMarketList/getData'
 import { getIndividualTicker } from '@/app/utils/getStockData/page'
 import { getStockData } from '@/app/utils/getStockData/page'
 import { StoreStateContext } from '@/app/utils/context/page'
-import { ScrollArea } from '../UI/scrollBar/page'
+import  ScrollAreaPage  from '../UI/scrollBar/page'
 type Props = {}
 
-const SearchBar = (props: any) => {
+const SearchBar:React.FC<Props> = (props: any) => {
     const [searchTerm,setSearchTerm]=useState<any>(null)
     const [dataSet,setDataSet]=useState([])
      const inputData=useRef<HTMLInputElement | null>(null);
@@ -69,11 +69,11 @@ const SearchBar = (props: any) => {
     <div className=' 
      md:ml-12 md:h-12' >
         <input className=' rounded-sm border-2 md:text-2xl ' placeholder='Search for Stock' onChange={handleChange} ref={inputData} />
-        {searchTerm!=null? <ScrollArea className=' max-sm:h-[200px] md:h-[100px] max-sm:w-[350px] md:w-[450px] md:z-20 rounded-md border p-4' >
+        {searchTerm!=null? <ScrollAreaPage className=' max-sm:h-[200px] md:h-[100px] max-sm:w-[350px] md:w-[450px] md:z-20 rounded-md border p-4' >
           {searchTerm && searchTerm?.map((item:any)=>(<div key={item.id} className='' >
             <button className='' key={item.id} onClick={()=>fetchDataForTicker(item.ticker)}  > <h1 className='' >{item.ticker}</h1> </button>
   </div>))} 
-  </ScrollArea> :<div  >
+  </ScrollAreaPage> :<div  >
     </div>}
         
     </div>

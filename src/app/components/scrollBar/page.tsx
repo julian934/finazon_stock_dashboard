@@ -2,7 +2,8 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { getTimeSeries,getDataSnapshot } from '@/app/utils/getStockData/page'
-import { ScrollArea } from '../UI/scrollBar/page'
+//import { ScrollArea } from '../UI/scrollBar/page'
+import { ScrollArea } from '@radix-ui/react-scroll-area'
 import Dashboard from '../dashboardDisplay/page'
 type Props = {}
 
