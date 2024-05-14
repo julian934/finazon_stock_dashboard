@@ -23,5 +23,5 @@ const requestOptions:any = {
     return res.status(500).json({error:'Failed to fetch data'})
 }
 }
-
+export {getData};
 export default {default:getData}
