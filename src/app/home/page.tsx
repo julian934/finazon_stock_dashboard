@@ -10,7 +10,7 @@ import StockData from '../components/scrollBar/page'
 import axios from "axios"
 import Dashboard from '../components/dashboardDisplay/page'
 //import StockChart from '../components/lineChart/page'
-import SearchBar from '../components/searchBar/page'
+import SearchBar from '../components/searchBar/searchBar'
 import Footer from '../components/footer/page'
 import Slider from '../components/dataSlider/page'
 const myHeaders = new Headers();
